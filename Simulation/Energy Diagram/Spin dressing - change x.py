@@ -6,7 +6,7 @@ from scipy import linalg
 
 
 delta_y = 0.1 # Resolution in Dressing parameter y
-dress_par_x = 8.6 # Dressing parameter x
+dress_par_x = 5 # Dressing parameter x
 N = 100   # Number of energy levels, even number
 num = 160 #
 MM = N -1  # Odd number
@@ -101,11 +101,12 @@ if __name__ == '__main__':
         for k in range(1,MM,1):
             z[i,k] = d[k-1,]
 
-        np.savetxt('test.txt', z)
+        file_name = 'Dressing parameter x =' + str(dress_par_x) + '.txt'
+        np.savetxt(file_name, z)
 
 
 
-dataset = np.genfromtxt(fname='test.txt',skip_header=1)
+dataset = np.genfromtxt(fname=file_name,skip_header=1)
 x=dataset[:,0]
 plt.figure()
 for h in range(1, MM ,1):
@@ -127,8 +128,7 @@ font = {'family' : 'serif',
         'weight' : 'normal',
         'size'   : 16,
         }
-
-plt.text(6.5, 3.0, txt  , fontdict=font) # first two numbers represent the position of text in plot
+plt.text(6.5, 3.0, txt  , fontdict=font)
 plt.suptitle('Energy Diagram', fontsize=20)
 plt.savefig(filename)
 #plt.show()
