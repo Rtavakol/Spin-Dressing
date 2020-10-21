@@ -5,7 +5,7 @@ https://summit.sfu.ca/item/17959
 
 What is Spin dressing?
 
-this is technique in which you can modify the gyromagnetic ratio of a particle.
+This is a technique in which you can modify the gyromagnetic ratio of a particle.
 The idea of modifying the gyromagnetic ratio of a spin system by applying time-dependant
 magnetic fields might seem strange but the idea is well-established and dates to work done
 in the 1960s by C. Cohen-Tannoudji and S. Haroche [1]. When a spin-1/2 particle simultaneously
