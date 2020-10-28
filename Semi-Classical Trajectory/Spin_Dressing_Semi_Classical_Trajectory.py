@@ -39,7 +39,9 @@ def rKN(x, fx, n, hs, dress_par_x, dress_par_y, dress_freq):
 dress_par_x = 1.0 # dressing parameter x
 dress_par_y = 0.1 # dressing parameter y
 dress_freq = 1000.0 # Frequency of dressing field
-total_time = 4010; delta_t = 0.000001 # Total time of interaction in ms and also time resolution in ms
+num_dress_cyc = 4. # Number of dressing cycles
+total_time = int(1e6 * num_dress_cyc / dress_freq + 10) ; delta_t = 1e-6 # Total time of interaction in us and also time resolution in s
+
 
 Larmor_freq = dress_par_y * dress_freq # Define Larmor precession frequency
 modified_larmor_freq = Larmor_freq * special.jv(0,dress_par_x) # Modified precession frequency calculated using modified gyromagnetic ratio
@@ -87,7 +89,7 @@ def plot3d(xs1,ys1,zs1,xs2,ys2,zs2 ):
     ax.text(0.05, 0.05, 0.7, r'B$_{0}$', (0,0,0),fontsize=14,color='red')
     ax.text(0.2, 0.4, 0, r'B$_{d}$', (0,0,0),fontsize=14,color='green')
     ax.text(-0.3, -1.3, 0, 'M', (0,0,0),fontsize=14,color='black')
-    subtitle = 'Dressing Parameters'  + '\n' '$y$=' + str(0.1) + '   '  + '$x$=' + str(dress_par_x) + '\n' 'f$_{d}$=' + str(int(dress_freq)) + '  ' + 'f$_{L}$=' + \
+    subtitle = 'Dressing Parameters'  + '\n' '$y$=' + str(0.1) + '   '  + '$x$={:.2f}'.format(dress_par_x) + '\n' 'f$_{d}$=' + str(int(dress_freq)) + '  ' + 'f$_{L}$=' + \
            str(int(Larmor_freq)) + '   ' + 'f$_{mod}$=' + str(int(modified_larmor_freq))
 
     fig.suptitle(subtitle, fontsize=12)
@@ -152,10 +154,10 @@ def plot3d(xs1,ys1,zs1,xs2,ys2,zs2 ):
     ax.plot(xs2, ys2, zs2,linestyle='--' ,linewidth=2, c='k')
 
     # Save the figure
-    file_name = 'Dressing Parameters'  + '_y_' + str(dress_par_y)  + '_x_' + str(dress_par_x) + '_fd_' + str(int(dress_freq)) + '_fL_' + \
-                str(int(Larmor_freq)) + '_fmod_' + str(int(modified_larmor_freq)) + '.png'
+    params = [dress_par_y, dress_par_x, dress_freq, Larmor_freq, modified_larmor_freq]
+    file_name = 'Dressing Parameters_y {}, x {:.2f}, fd {:.0f}, fL {:.0f}, fmod {:.0f}.png'.format(*params)
     fig.savefig(file_name,dpi=500)
-    plt.show()
+    #plt.show()
 
 def VDP1(dress_par_x, dress_par_y, dress_freq):
     global total_time, delta_t
@@ -178,7 +180,10 @@ def VDP1(dress_par_x, dress_par_y, dress_freq):
     plot3d(Sx1,Sy1,Sz1,Sx2,Sy2,Sz2)
 
 
-VDP1(dress_par_x, dress_par_y, dress_freq)
+for x in np.linspace(0.01, 20, 60):
+    dress_par_x = x
+    modified_larmor_freq = Larmor_freq * special.jv(0, x)
+    VDP1(x, dress_par_y, dress_freq)
 
 
 
