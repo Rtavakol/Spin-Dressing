@@ -6,15 +6,15 @@ https://summit.sfu.ca/item/17959
 ## Spin Dressing Animation
 I used Python to create spin dressing animations.\
 In Spin dressing technique you can modify the gyromagnetic ratio. You can make it smaller (positive)\
-[Animation 1: Positive Gyromagnetic Ratio](https://www.youtube.com/watch?v=EiqRMX0nIhQ)
-[Animation 2: Positive Gyromagnetic Ratio](https://www.youtube.com/watch?v=iyd_FxOrCf4)
+[Animation 1: Positive Gyromagnetic Ratio](https://www.youtube.com/watch?v=EiqRMX0nIhQ)\
+[Animation 2: Positive Gyromagnetic Ratio](https://www.youtube.com/watch?v=iyd_FxOrCf4)\
 
 Or zero!\
-[Animation 3: Zero Gyromagnetic Ratio](https://www.youtube.com/watch?v=jOi7MLmp728)
-[Animation 4: Zero Gyromagnetic Ratio](https://www.youtube.com/watch?v=h2akxwL6yRY)
+[Animation 3: Zero Gyromagnetic Ratio](https://www.youtube.com/watch?v=jOi7MLmp728)\
+[Animation 4: Zero Gyromagnetic Ratio](https://www.youtube.com/watch?v=h2akxwL6yRY)\
 
 Or smaller (negative)!\
-[Animation 5: Negative Gyromagnetic Ratio](https://www.youtube.com/watch?v=YB0gY3PAUek)
+[Animation 5: Negative Gyromagnetic Ratio](https://www.youtube.com/watch?v=YB0gY3PAUek)\
 
 Or even larger! this regime is not as easy as the previous ones to explain by theory.\
 [Animation 6: Positive Gyromagnetic Ratiot, g/g' > 1](https://www.youtube.com/watch?v=Nm4_zSmGw-M)
