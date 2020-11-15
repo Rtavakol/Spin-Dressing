@@ -3,7 +3,8 @@
 Simulation and Animation of Spin Dressing and Critical spin Dressing. For more information on spin dressing check my thesis:\
 https://summit.sfu.ca/item/17959
 
-I used Python to do spin dressing simulation and animations.\
+## Spin Dressing Animation
+I used Python to create spin dressing animations.\
 In Spin dressing technique you can modify the gyromagnetic ratio. You can make it smaller (positive)\
 [Animation 1: Positive Gyromagnetic Ratio](https://www.youtube.com/watch?v=EiqRMX0nIhQ)
 [Animation 2: Positive Gyromagnetic Ratio](https://www.youtube.com/watch?v=iyd_FxOrCf4)
@@ -33,7 +34,7 @@ dressed precession frequency. This situation can be viewed as if the particle ha
 or apparent gyromagnetic ratio. It is thus common to refer to the particle as a dressed
 particle. One can certainly apply a dressing field to two spin species simultaneously, and
 in principle it should be possible to tune the modified gyromagnetic ratios of the two to be
-equal. This special condition is referred to as a Critical Spin Dressing (CSD) condition.\
+equal. This special condition is referred to as a Critical Spin Dressing (CSD) condition.
 
 ## References:
 [1] C. Cohen-Tannoudji and S. Haroche. Absorption et diffusion de photons optiques par
